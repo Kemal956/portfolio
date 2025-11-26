@@ -29,18 +29,23 @@
 
 <main>
     <h2>Envoyez-moi un message</h2>
+    <p>Vous pouvez m’écrire directement :<br>
+        <a class="button" href="mailto:TON_ADRESSE@mail.com">📩 M’envoyer un email</a>
+    </p>
 
-    <form>
+    <br><br>
+
+    <form action="mailto:TON_ADRESSE@mail.com" method="POST" enctype="text/plain">
         <label>Nom :</label>
-        <input type="text" required>
+        <input type="text" name="Nom" required>
 
         <label>Email :</label>
-        <input type="email" required>
+        <input type="email" name="Email" required>
 
         <label>Message :</label>
-        <textarea required></textarea>
+        <textarea name="Message" required></textarea>
 
-        <button type="submit">Envoyer</button>
+        <button type="submit" class="button">Envoyer</button>
     </form>
 </main>
 
