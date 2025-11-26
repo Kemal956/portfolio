@@ -1,19 +1,21 @@
+// Bouton mode sombre
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 
-// Définir un thème par défaut si jamais il n'est pas présent
-if (!body.getAttribute("data-theme")) {
-  body.setAttribute("data-theme", "light");
-}
-
-// Changer l'emoji + le texte selon le thème actuel
 toggleBtn.onclick = () => {
+  toggleBtn.style.transform = "scale(1.1)";
+  setTimeout(() => { toggleBtn.style.transform = ""; }, 200);
+
   const current = body.getAttribute("data-theme");
   const next = current === "light" ? "dark" : "light";
   body.setAttribute("data-theme", next);
 
-  toggleBtn.textContent =
-    next === "light"
-      ? "🌙 Mode sombre"
-      : "☀️ Mode clair";
+  toggleBtn.textContent = next === "light" ? "🌙 Mode sombre" : "☀️ Mode clair";
 };
+
+// Barre de progression
+window.addEventListener("scroll", () => {
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (window.scrollY / docHeight) * 100;
+  document.querySelector(".scroll-progress").style.width = progress + "%";
+});
