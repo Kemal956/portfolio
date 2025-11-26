@@ -36,7 +36,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background: var(--bg);
   color: var(--text);
-  padding-top: 140px;
+  padding-top: 160px; /* espace uniformisé */
   transition: background 0.5s ease, color 0.5s ease;
   line-height: 1.7;
 }
@@ -50,13 +50,14 @@ header {
   top: 0;
   width: 100%;
   padding: 26px 40px;
+
   backdrop-filter: var(--blur);
   background: var(--header-bg);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* centre correctement tout */
   justify-content: center;
 
   z-index: 200;
@@ -95,9 +96,14 @@ header h1 {
   letter-spacing: 1.2px;
   color: var(--text);
   margin-bottom: 12px;
+  z-index: 2; /* assure que rien ne le recouvre */
 }
 
-/* menu */
+/* Navigation */
+nav {
+  z-index: 2;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -110,6 +116,7 @@ nav a {
   font-size: 18px;
   font-weight: 500;
   position: relative;
+  padding: 6px 4px; /* zone clickable élargie */
 }
 
 nav a::after {
@@ -141,7 +148,7 @@ main {
   transition: background 0.5s ease;
 }
 
-/* Image réduite */
+/* Image portrait */
 .portrait,
 .photo {
   display: block;
