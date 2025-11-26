@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=1200">
-  <title>Accueil</title>
+    <meta charset="UTF-8">
+    <title>Accueil - Mon Portfolio</title>
+    <meta name="viewport" content="width=1200">
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <!-- Police Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body data-theme="light">
+
+<!-- Barre de progression -->
+<div class="scroll-progress"></div>
 
 <header>
     <button id="theme-toggle">🌙 Mode sombre</button>
@@ -20,14 +25,22 @@
             <li><a href="index.html">Accueil</a></li>
             <li><a href="projets.html">Projets</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="présentation.html">Présentation</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <h2>Bienvenue</h2>
-    <p>Ceci est la page d’accueil de mon portfolio.</p>
+    <img src="https://cdn.pixabay.com/photo/2025/05/16/14/54/eastern-cottontail-9604011_1280.jpg" alt="Ma photo" class="photo">
+
+    <section>
+        <h2>Bienvenue !</h2>
+        <p>
+            Je suis en train d'apprendre le développement web.  
+            Voici quelques projets sur lesquels je travaille.
+        </p>
+        <a class="button" href="cv.pdf" download>Télécharger mon CV</a>
+    </section>
 </main>
 
 <script src="script.js"></script>
