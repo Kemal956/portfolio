@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1200">
-    <title>Contact - Mon Portfolio</title>
+    <title>Contact</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -29,40 +29,32 @@
 </header>
 
 <main class="contact-page">
-
-    <h2>Envoyez-moi un message</h2>
-    <p>N’hésitez pas à me contacter, je répondrai rapidement.</p>
+    <h2>Contactez-moi</h2>
+    <p>Vous pouvez me contacter via ce formulaire :</p>
 
     <div class="contact-card">
+        <div class="input-group">
+            <label>Nom</label>
+            <input type="text" placeholder="Votre nom">
+        </div>
 
-        <form action="mailto:tonmail@exemple.com" method="POST" enctype="text/plain">
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Votre email">
+        </div>
 
-            <div class="input-group">
-                <label>Nom</label>
-                <input type="text" name="Nom" required>
-            </div>
+        <div class="input-group">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Votre message"></textarea>
+        </div>
 
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email" name="Email" required>
-            </div>
-
-            <div class="input-group">
-                <label>Message</label>
-                <textarea name="Message" rows="5" required></textarea>
-            </div>
-
-            <button type="submit" class="contact-btn">Envoyer</button>
-
-        </form>
-
-        <p class="direct-mail">
-            Ou contactez-moi directement :  
-            <a href="mailto:tonmail@exemple.com">tonmail@exemple.com</a>
-        </p>
-
+        <button class="contact-btn">Envoyer</button>
     </div>
 
+    <div class="direct-mail">
+        <p>Ou directement par mail :</p>
+        <a href="mailto:ton_email@gmail.com">ton_email@gmail.com</a>
+    </div>
 </main>
 
 <script src="script.js"></script>
