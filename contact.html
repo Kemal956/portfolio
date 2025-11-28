@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
     <title>Contact - Mon Portfolio</title>
+    <meta name="viewport" content="width=1200">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -27,37 +27,21 @@
     </nav>
 </header>
 
-<main class="contact-container">
+<main>
+    <h2>Envoyez-moi un message</h2>
 
-    <h2>Contactez-moi</h2>
-    <p>N'hésitez pas à m’envoyer un message. Je vous répondrai rapidement.</p>
+    <form action="mailto:ton-email@exemple.com" method="POST" enctype="text/plain">
+        <label>Nom :</label>
+        <input type="text" name="Nom" required>
 
-    <form class="contact-form" action="mailto:tonmail@exemple.com" method="POST" enctype="text/plain">
+        <label>Email :</label>
+        <input type="email" name="Email" required>
 
-        <div class="input-group">
-            <label>Nom</label>
-            <input type="text" name="Nom" required>
-        </div>
+        <label>Message :</label>
+        <textarea name="Message" required></textarea>
 
-        <div class="input-group">
-            <label>Email</label>
-            <input type="email" name="Email" required>
-        </div>
-
-        <div class="input-group">
-            <label>Message</label>
-            <textarea name="Message" rows="5" required></textarea>
-        </div>
-
-        <button type="submit" class="contact-btn">Envoyer</button>
-
-        <p class="contact-mail-link">
-            Ou me contacter directement :
-            <a href="mailto:tonmail@exemple.com">tonmail@exemple.com</a>
-        </p>
-
+        <button type="submit">Envoyer</button>
     </form>
-
 </main>
 
 <script src="script.js"></script>
