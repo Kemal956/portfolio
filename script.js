@@ -1,44 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const body = document.body;
-  const toggleBtn = document.getElementById("theme-toggle");
-  const PROGRESS = document.querySelector(".scroll-progress");
+// Récupérer le thème sauvegardé
+const savedTheme = localStorage.getItem("theme");
 
-  function applyTheme(theme) {
-    if (theme !== "dark" && theme !== "light") theme = "light";
-    body.setAttribute("data-theme", theme);
-    if (toggleBtn) {
-      toggleBtn.textContent = theme === "light" ? "🌙 Mode sombre" : "☀️ Mode clair";
+if (savedTheme) {
+    document.body.setAttribute("data-theme", savedTheme);
+}
+
+const toggleBtn = document.getElementById("theme-toggle");
+
+// Mise à jour de l'affichage du bouton
+function updateToggleButton() {
+    if (document.body.getAttribute("data-theme") === "dark") {
+        toggleBtn.textContent = "☀️ Mode clair";
+    } else {
+        toggleBtn.textContent = "🌙 Mode sombre";
     }
-  }
+}
+updateToggleButton();
 
-  const saved = localStorage.getItem("theme");
-  if (saved) {
-    applyTheme(saved);
-  } else {
-    applyTheme(body.getAttribute("data-theme") || "light");
-  }
+// Changement du thème
+toggleBtn.addEventListener("click", () => {
+    const current = document.body.getAttribute("data-theme");
+    const newTheme = current === "dark" ? "light" : "dark";
 
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      const current = body.getAttribute("data-theme");
-      const next = current === "light" ? "dark" : "light";
+    document.body.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+    updateToggleButton();
+});
 
-      toggleBtn.style.transform = "scale(1.08)";
-      setTimeout(() => (toggleBtn.style.transform = ""), 150);
-
-      applyTheme(next);
-      localStorage.setItem("theme", next);
-    });
-  }
-
-  if (PROGRESS) {
-    const updateProgress = () => {
-      const docHeight = document.body.scrollHeight - window.innerHeight;
-      const scroll = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
-      PROGRESS.style.width = scroll + "%";
-    };
-    updateProgress();
-    window.addEventListener("scroll", updateProgress);
-    window.addEventListener("resize", updateProgress);
-  }
+// Barre de progression
+window.addEventListener("scroll", () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (scrollTop / height) * 100;
+    document.querySelector(".scroll-progress").style.width = scrolled + "%";
 });
