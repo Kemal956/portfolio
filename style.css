@@ -20,10 +20,12 @@ body[data-theme="dark"] {
     --card: #333333;
 }
 
+/* === HEADER === */
 header {
     background: var(--header);
     padding: 20px;
     text-align: center;
+    position: relative; /* nécessaire pour placer le bouton */
 }
 
 nav ul {
@@ -40,6 +42,26 @@ nav a {
     font-weight: bold;
 }
 
+/* === BOUTON MODE SOMBRE === */
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    border: none;
+    background: #0077ff;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    background: #005fd1;
+}
+
+/* === BARRE SCROLL === */
 .scroll-progress {
     height: 4px;
     background: #0077ff;
@@ -49,12 +71,14 @@ nav a {
     left: 0;
 }
 
+/* === MAIN === */
 main {
     max-width: 900px;
     margin: auto;
     padding: 30px;
 }
 
+/* === BOUTON CV === */
 .cv-button {
     display: inline-block;
     padding: 12px 20px;
@@ -66,6 +90,7 @@ main {
     margin-top: 20px;
 }
 
+/* === IMAGE PORTRAIT === */
 .portrait {
     width: 200px;
     border-radius: 15px;
@@ -73,6 +98,7 @@ main {
     margin-bottom: 20px;
 }
 
+/* === BOÎTES === */
 .info-box {
     background: var(--card);
     padding: 20px;
