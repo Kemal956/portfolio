@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Contact - Mon Portfolio</title>
     <meta name="viewport" content="width=1200">
+    <title>Contact - Mon Portfolio</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -14,8 +14,9 @@
 <div class="scroll-progress"></div>
 
 <header>
-    <button id="theme-toggle">🌙 Mode sombre</button>
     <h1>Mon Portfolio</h1>
+
+    <button id="theme-toggle">🌙 Mode sombre</button>
 
     <nav>
         <ul>
@@ -27,21 +28,41 @@
     </nav>
 </header>
 
-<main>
+<main class="contact-page">
+
     <h2>Envoyez-moi un message</h2>
+    <p>N’hésitez pas à me contacter, je répondrai rapidement.</p>
 
-    <form action="mailto:ton-email@exemple.com" method="POST" enctype="text/plain">
-        <label>Nom :</label>
-        <input type="text" name="Nom" required>
+    <div class="contact-card">
 
-        <label>Email :</label>
-        <input type="email" name="Email" required>
+        <form action="mailto:tonmail@exemple.com" method="POST" enctype="text/plain">
 
-        <label>Message :</label>
-        <textarea name="Message" required></textarea>
+            <div class="input-group">
+                <label>Nom</label>
+                <input type="text" name="Nom" required>
+            </div>
 
-        <button type="submit">Envoyer</button>
-    </form>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="Email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Message</label>
+                <textarea name="Message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="contact-btn">Envoyer</button>
+
+        </form>
+
+        <p class="direct-mail">
+            Ou contactez-moi directement :  
+            <a href="mailto:tonmail@exemple.com">tonmail@exemple.com</a>
+        </p>
+
+    </div>
+
 </main>
 
 <script src="script.js"></script>
