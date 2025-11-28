@@ -20,14 +20,28 @@ body[data-theme="dark"] {
     --card: #333333;
 }
 
-/* === HEADER === */
+/* HEADER */
 header {
     background: var(--header);
     padding: 20px;
     text-align: center;
-    position: relative; /* nécessaire pour placer le bouton */
+    position: relative;
 }
 
+/* Bouton thème */
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    background: var(--card);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* NAVIGATION */
 nav ul {
     display: flex;
     justify-content: center;
@@ -42,26 +56,7 @@ nav a {
     font-weight: bold;
 }
 
-/* === BOUTON MODE SOMBRE === */
-#theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 8px 14px;
-    border: none;
-    background: #0077ff;
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#theme-toggle:hover {
-    background: #005fd1;
-}
-
-/* === BARRE SCROLL === */
+/* SCROLL BAR HAUT */
 .scroll-progress {
     height: 4px;
     background: #0077ff;
@@ -71,14 +66,14 @@ nav a {
     left: 0;
 }
 
-/* === MAIN === */
+/* MAIN */
 main {
     max-width: 900px;
     margin: auto;
     padding: 30px;
 }
 
-/* === BOUTON CV === */
+/* BOUTON CV */
 .cv-button {
     display: inline-block;
     padding: 12px 20px;
@@ -90,7 +85,7 @@ main {
     margin-top: 20px;
 }
 
-/* === IMAGE PORTRAIT === */
+/* PRESENTATION PHOTO */
 .portrait {
     width: 200px;
     border-radius: 15px;
@@ -98,7 +93,7 @@ main {
     margin-bottom: 20px;
 }
 
-/* === BOÎTES === */
+/* BOÎTE D’INFOS */
 .info-box {
     background: var(--card);
     padding: 20px;
