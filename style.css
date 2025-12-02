@@ -1,6 +1,6 @@
-/* ---------------------------- */
-/*          VARIABLES           */
-/* ---------------------------- */
+/* ============================== */
+/*            VARIABLES           */
+/* ============================== */
 
 :root {
     --bg: #ffffff;
@@ -16,9 +16,9 @@ body[data-theme="dark"] {
     --card: #333333;
 }
 
-/* ---------------------------- */
-/*            GLOBAL            */
-/* ---------------------------- */
+/* ============================== */
+/*              GLOBAL            */
+/* ============================== */
 
 body {
     margin: 0;
@@ -34,9 +34,9 @@ main {
     padding: 30px;
 }
 
-/* ---------------------------- */
-/*            HEADER            */
-/* ---------------------------- */
+/* ============================== */
+/*              HEADER            */
+/* ============================== */
 
 header {
     background: var(--header);
@@ -45,11 +45,7 @@ header {
     position: relative;
 }
 
-header h1 {
-    margin: 0 0 10px 0;
-}
-
-/* Bouton thème */
+/* Bouton mode sombre */
 #theme-toggle {
     position: absolute;
     top: 20px;
@@ -62,14 +58,13 @@ header h1 {
     cursor: pointer;
 }
 
-/* NAVIGATION */
+/* Navigation */
 nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 nav a {
@@ -78,10 +73,7 @@ nav a {
     font-weight: bold;
 }
 
-/* ---------------------------- */
-/*      SCROLL PROGRESS BAR    */
-/* ---------------------------- */
-
+/* Barre de progression */
 .scroll-progress {
     height: 4px;
     background: #0077ff;
@@ -91,9 +83,9 @@ nav a {
     left: 0;
 }
 
-/* ---------------------------- */
-/*           ACCUEIL            */
-/* ---------------------------- */
+/* ============================== */
+/*            BOUTON CV           */
+/* ============================== */
 
 .cv-button {
     display: inline-block;
@@ -106,9 +98,9 @@ nav a {
     margin-top: 20px;
 }
 
-/* ---------------------------- */
-/*        PAGE PRESENTATION     */
-/* ---------------------------- */
+/* ============================== */
+/*            PRESENTATION        */
+/* ============================== */
 
 .portrait {
     width: 200px;
@@ -123,9 +115,9 @@ nav a {
     border-radius: 12px;
 }
 
-/* ---------------------------- */
-/*         PAGE CONTACT         */
-/* ---------------------------- */
+/* ============================== */
+/*          PAGE CONTACT          */
+/* ============================== */
 
 .contact-page h2 {
     text-align: center;
@@ -200,97 +192,53 @@ body[data-theme="dark"] .input-group textarea {
     font-weight: bold;
 }
 
-/* ---------------------------- */
-/*         PAGE PROJETS         */
-/* ---------------------------- */
+/* ============================== */
+/*          PAGE PROJETS          */
+/* ============================== */
 
-.projects-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.project-item {
-    background: var(--card);
-    padding: 22px;
-    border-radius: 15px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
-}
-
-.project-item h3 {
-    margin: 0 0 8px 0;
-}
-
-.project-item p {
-    margin: 0 0 12px 0;
-}
-
-.project-link {
-    display: inline-block;
-    padding: 10px 16px;
-    background: #0077ff;
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project-link:hover {
-    background: #005fcc;
-}
-
-/* ---------------------------- */
-/*      PAGE PROJET UNIQUE      */
-/* ---------------------------- */
-
-.project-page h2 {
+.projects-page h2 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 25px;
 }
 
-.project-content {
-    display: flex;
-    gap: 30px;
+.project-card {
     background: var(--card);
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    align-items: flex-start;
-}
-
-.project-image {
-    width: 350px;
+    padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
-
-.project-text h3 {
-    margin-top: 10px;
-    font-size: 22px;
-}
-
-.project-text ul {
     margin-bottom: 25px;
-    padding-left: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
 }
 
-.back-button {
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.project-card p {
+    margin-bottom: 15px;
+}
+
+/* bouton "voir le projet" */
+.project-btn {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 10px 18px;
     background: #0077ff;
     color: white;
-    text-decoration: none;
-    border-radius: 10px;
     font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.25s;
 }
 
-.back-button:hover {
+.project-btn:hover {
     background: #005fcc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
