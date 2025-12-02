@@ -1,27 +1,7 @@
-/* -------- VARIABLES (THEME CLAIR / SOMBRE) -------- */
+/* ---------------------------- */
+/*          VARIABLES           */
+/* ---------------------------- */
 
-body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    transition: background 0.3s, color 0.3s;
-}
-
-:root {
-    --bg: #ffffff;
-    --text: #000000;
-    --header: #f2f2f2;
-    --card: #e6e6e6;
-}body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    transition: background 0.3s, color 0.3s;
-}
-
-/* VARIABLES */
 :root {
     --bg: #ffffff;
     --text: #000000;
@@ -36,12 +16,37 @@ body[data-theme="dark"] {
     --card: #333333;
 }
 
-/* HEADER */
+/* ---------------------------- */
+/*            GLOBAL            */
+/* ---------------------------- */
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* ---------------------------- */
+/*            HEADER            */
+/* ---------------------------- */
+
 header {
     background: var(--header);
     padding: 20px;
     text-align: center;
     position: relative;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
 }
 
 /* Bouton thème */
@@ -64,6 +69,7 @@ nav ul {
     gap: 20px;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav a {
@@ -72,7 +78,10 @@ nav a {
     font-weight: bold;
 }
 
-/* BARRE SCROLL */
+/* ---------------------------- */
+/*      SCROLL PROGRESS BAR    */
+/* ---------------------------- */
+
 .scroll-progress {
     height: 4px;
     background: #0077ff;
@@ -82,14 +91,10 @@ nav a {
     left: 0;
 }
 
-/* MAIN LAYOUT */
-main {
-    max-width: 900px;
-    margin: auto;
-    padding: 30px;
-}
+/* ---------------------------- */
+/*           ACCUEIL            */
+/* ---------------------------- */
 
-/* BOUTON CV */
 .cv-button {
     display: inline-block;
     padding: 12px 20px;
@@ -101,7 +106,10 @@ main {
     margin-top: 20px;
 }
 
-/* PHOTO PRESENTATION */
+/* ---------------------------- */
+/*        PAGE PRESENTATION     */
+/* ---------------------------- */
+
 .portrait {
     width: 200px;
     border-radius: 15px;
@@ -109,16 +117,15 @@ main {
     margin-bottom: 20px;
 }
 
-/* BOÎTE INFOS */
 .info-box {
     background: var(--card);
     padding: 20px;
     border-radius: 12px;
 }
 
-/* ================================ */
-/*            PAGE CONTACT          */
-/* ================================ */
+/* ---------------------------- */
+/*         PAGE CONTACT         */
+/* ---------------------------- */
 
 .contact-page h2 {
     text-align: center;
@@ -193,225 +200,97 @@ body[data-theme="dark"] .input-group textarea {
     font-weight: bold;
 }
 
-/* ================================ */
-/*            PAGE PROJETS          */
-/* ================================ */
-
-.projects-page h2 {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 30px;
-}
+/* ---------------------------- */
+/*         PAGE PROJETS         */
+/* ---------------------------- */
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 25px;
 }
 
-.project-card {
+.project-item {
     background: var(--card);
-    padding: 25px;
+    padding: 22px;
     border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+.project-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
 }
 
-.project-card h3 {
-    margin: 0;
-    font-size: 22px;
-    color: var(--text);
+.project-item h3 {
+    margin: 0 0 8px 0;
 }
 
-.project-card p {
-    margin: 10px 0 15px;
-    opacity: 0.8;
+.project-item p {
+    margin: 0 0 12px 0;
 }
 
-.project-btn {
+.project-link {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 10px 16px;
     background: #0077ff;
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
 }
 
-.project-btn:hover {
+.project-link:hover {
     background: #005fcc;
 }
 
+/* ---------------------------- */
+/*      PAGE PROJET UNIQUE      */
+/* ---------------------------- */
 
-body[data-theme="dark"] {
-    --bg: #1a1a1a;
-    --text: #ffffff;
-    --header: #2a2a2a;
-    --card: #333333;
-}
-
-/* -------- HEADER -------- */
-
-header {
-    background: var(--header);
-    padding: 20px;
+.project-page h2 {
     text-align: center;
-    position: relative;
+    font-size: 32px;
+    margin-bottom: 25px;
 }
 
-/* Bouton thème */
-#theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 8px 14px;
-    background: var(--card);
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Navigation */
-nav ul {
+.project-content {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-}
-
-nav a {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* -------- BARRE DE PROGRESSION -------- */
-
-.scroll-progress {
-    height: 4px;
-    background: #0077ff;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-/* -------- MAIN -------- */
-
-main {
-    max-width: 900px;
-    margin: auto;
+    gap: 30px;
+    background: var(--card);
     padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    align-items: flex-start;
 }
 
-/* -------- BOUTON CV -------- */
+.project-image {
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
 
-.cv-button {
+.project-text h3 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.project-text ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.back-button {
     display: inline-block;
     padding: 12px 20px;
     background: #0077ff;
     color: white;
-    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-/* -------- PRESENTATION -------- */
-
-.portrait {
-    width: 200px;
-    border-radius: 15px;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.info-box {
-    background: var(--card);
-    padding: 20px;
-    border-radius: 12px;
-}
-
-/* ============================================= */
-/*                PAGE CONTACT                    */
-/* ============================================= */
-
-.contact-page h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.contact-page p {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.contact-card {
-    max-width: 600px;
-    background: var(--card);
-    margin: 0 auto;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: var(--text);
-}
-
-.input-group input,
-.input-group textarea {
-    width: 100%;
-    padding: 12px;
     border-radius: 10px;
-    border: none;
-    background: #fff;
-    font-size: 16px;
+    font-weight: bold;
 }
 
-body[data-theme="dark"] .input-group input,
-body[data-theme="dark"] .input-group textarea {
-    background: #2a2a2a;
-    color: white;
-}
-
-.contact-btn {
-    width: 100%;
-    padding: 12px;
-    background: #0077ff;
-    border: none;
-    font-size: 18px;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.contact-btn:hover {
+.back-button:hover {
     background: #005fcc;
-}
-
-.direct-mail {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.direct-mail a {
-    color: #0077ff;
-    font-weight: bold;
 }
