@@ -2,13 +2,22 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
     <title>Projet 1 – Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body data-theme="light">
+
+<div class="scroll-progress"></div>
 
 <header>
     <h1>Projet 1</h1>
+
+    <button id="theme-toggle">🌙 Mode sombre</button>
+
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
@@ -19,14 +28,12 @@
     </nav>
 </header>
 
-<div class="scroll-progress"></div>
-
 <main class="project-page">
 
     <h2>Projet 1 : Site Portfolio Moderne</h2>
 
     <div class="project-content">
-        <img src="img/projet1.png" alt="Aperçu projet 1" class="project-image">
+        <img src="img/projet1.png" alt="Aperçu Projet 1" class="project-image">
 
         <div class="project-text">
             <h3>Description du projet</h3>
@@ -48,6 +55,8 @@
     </div>
 
 </main>
+
+<script src="script.js"></script>
 
 </body>
 </html>
